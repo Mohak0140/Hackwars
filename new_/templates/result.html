@@ -13,13 +13,54 @@
             padding: 0;
         }
 
-        header {
+        /* header {
             background-color: #0056b3;
             color: white;
             text-align: center;
             padding: 15px;
+        } */
+        header {
+            background-color: #0056b3;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
+        header img {
+            width: 150px;
+        }
+
+        header h1{
+            padding-right: 30rem;
+
+        }
+
+        nav {
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            padding: 8px 20px;
+            margin: 0 10px;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #0056b3;
+            color: white;
+            border-radius: 5px;
+        }
+    
         header h1 {
             margin: 0;
         }
@@ -38,16 +79,28 @@
         }
 
         footer {
+            background-color: #333;
+            color: white;
             text-align: center;
-            margin-top: 20px;
-            color: #777;
+            padding: 5px;
+            padding-top: 1rem;
+            margin-top: auto;
+            height: 3rem;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Results Display</h1>
+            <img src="LOGO.png" alt="EarlyAid Logo">
+            <h1>Results Display</h1>
     </header>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="Signup.html">Sign Up</a>
+    </nav>
+    
 
     <div class="container">
         <h2 class="text-center">Submitted Information</h2>
