@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | EarlyAid</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #0056b3;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav {
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            padding: 8px 15px;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            border-radius: 5px;
+        }
+
+        .container {
+            padding: 40px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .about-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .about-section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        .team-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr; /* Three columns in the first row */
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .team-section .row-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two columns in the second row */
+            gap: 30px;
+            margin-top: 30px;
+            /* margin-left: 50px; */
+        }
+
+        .team-member {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>EarlyAid | About Us</h1>
+    </header>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="Signup.html">Sign Up</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+        <div class="about-section">
+            <h2>Our Mission</h2>
+            <p>At EarlyAid, our mission is to revolutionize healthcare by providing advanced AI-driven diagnostic tools that help doctors and healthcare providers detect diseases at their earliest stages. By utilizing cutting-edge algorithms, we aim to improve patient outcomes, enhance decision-making processes, and make healthcare more accessible and efficient for everyone.</p>
+        </div>
+
+        <div class="team-section">
+            <div class="team-member">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK8hhAsmRo_0dYO0lq7cdrhG32bnXJJhdhxQ&s" alt="Tanmay Kaushik">
+                <h4>Tanmay Kaushik</h4>
+                <p>Second-year B.Tech Computer Science student at VIT Vellore, with specializing in Blockchain Technology and is passionate about leveraging its potential for real-world solutions.</p>
+            </div>
+            <div class="team-member">
+                <img src="https://static.theprint.in/wp-content/uploads/2022/10/ANI-20221014173749.jpg" alt="Mohak Nahata">
+                <h4>Mohak Nahata</h4>
+                <p>Second-year B.Tech Computer Science student at VIT Vellore, with specializing in Business Systems and is focused on developing solutions for modern business challenges.</p>
+            </div>
+            <div class="team-member">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLezJ0r6PX8wIwnT6npctj10nywhp_KjrAnw&s" alt="Mark Williams">
+                <h4>Chinmay Agarwal</h4>
+                <p>Second-year B.Tech Computer Science student at VIT Vellore, has a keen interest in Artificial Intelligence. Passionate about exploring AI's transformative potential.</p>
+            </div>
+        </div>
+
+        <div class="team-section row-2">
+            <div class="team-member">
+                <img src="https://media.harrypotterfanzone.com/bellatrix-lestrange-order-of-the-phoenix-portrait-6.jpg" alt="John Doe">
+                <h4>Yash Agarwal</h4>
+                <p>Second-year B.Tech Computer Science student at VIT Vellore, is specializing in Artificial Intelligence. He is passionate about exploring AI technologies and their applications to solve complex problems and drive innovation in the tech industry.</p>
+            </div>
+            <div class="team-member">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhoW87NP8rLvmprWGv5I1BOQhZMsPNYyBpZQ&s" alt="Sarah Lee">
+                <h4>Uddhav Sethi</h4>
+                <p>Second-year B.Tech Computer Science student at VIT Vellore, is specializing in Blockchain Technology. He is focused on harnessing the power of blockchain to develop secure, efficient, and innovative solutions for modern technological challenges.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 EarlyAid. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

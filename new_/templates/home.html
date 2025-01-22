@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EarlyAid</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #0056b3;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav {
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            padding: 8px 15px;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            border-radius: 5px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 10px;
+            padding: 20px;
+            flex: 1;
+        }
+
+        .ai-diagnostic {
+            background-color: #ffffff;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .ai-diagnostic h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .ai-diagnostic p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .right-panel {
+            background-color: #ffffff;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .disease {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .disease img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: auto;
+        }
+        header .logo{
+            float: left;
+            /* border: 2px solid red; */
+            width: 20%;
+            height: 4rem;
+        }
+        header img{
+            width: 13rem;
+            /* height: 4rem; */
+        }
+        header h1{
+            float: right;
+            padding-right: 20rem;
+            /* border: 2px solid green; */
+        }
+        header::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .disease:hover{
+            zoom: 1.1;
+            transition: ease-in-out;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="LOGO.png" alt="">
+        </div>
+        <h1>EarlyAid | AI Diagnostic Tool</h1>
+    </header>
+
+    <nav>
+        <a href="#">Sign Up</a>
+        <a href="/about.html">About Us</a>
+        <a href="./contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+        <div class="ai-diagnostic">
+            <h3>AI Diagnostic Feature</h3>
+            <p>EarlyAid uses advanced AI algorithms to analyze medical data and provide early detection of various diseases. By processing symptoms, medical history, and other parameters, our tool helps doctors and healthcare providers make informed decisions quickly. The AI can detect early signs of diseases such as Alzheimer's, heart disease, lung disease, Parkinson's, and cancer, improving patient outcomes.</p>
+        </div>
+
+        <div class="right-panel">
+            <h2>Diseases</h2>
+            <a href="heart.html" style="text-decoration: none; color:#333">
+                <div class="disease">
+                    <img src="https://dvl2h13awlxkt.cloudfront.net/assets/general-images/Knowledge/_1200x630_crop_center-center_82_none/CVD-iStock-1266230179.jpg?mtime=1653282867" alt="Heart Disease">
+                    <p><strong style="font-size: large;">Heart Disease</strong><br>Heart disease can manifest in various forms, including coronary artery disease, arrhythmias, heart failure, and more.</p>
+                </div>
+            </a>
+            <a href="lung.html" style="text-decoration: none; color:#333">
+                <div class="disease">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT_Xufdw6vPQlaoWr0QDyFwJcsQkgEsyfTUQ&s" alt="Lung Disease">
+                    <p><strong style="font-size: large;">Lung Disease</strong><br>Lung diseases are categorized into airway diseases (e.g., asthma, COPD), lung tissue diseases (e.g., pulmonary fibrosis), circulatory disorders (e.g., pulmonary hypertension), infections (e.g., pneumonia, TB), and lung cancer. These conditions affect breathing, oxygen exchange, or blood flow, often leading to symptoms like cough and shortness of breath.</p>
+                </div>
+            </a>
+            <a href="parkinson.html" style="text-decoration: none; color:#333">
+                <div class="disease">
+                    <img src="https://cdn.prod.website-files.com/632b83c53f474e747bf2cdd0/63867a253eebc317a6b486f3_What%20is%20Parkinson_s%201.jpg" alt="Parkinson">
+                    <p><strong style="font-size: large;">Parkinson</strong><br>Parkinson's disease is a condition that affects the brain, making it harder to control movement over time. It happens when certain brain cells stop producing enough dopamine, a chemical that helps with movement and coordination.</p>
+                </div>
+            </a>
+            <a href="kidney.html" style="text-decoration: none; color:#333">    
+                <div class="disease">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBaH5BHLu9ijHEQC-bhTozK_Z_XMzb7HUDjSH8ay4Nglcf_x5WltqCkolJBg2oXXHBIyI&usqp=CAU" alt="Cancer">
+                    <p><strong style="font-size: large;">Kidney Disease</strong><br>Kidney diseases are conditions where the kidneys fail to filter waste and fluids effectively. Common types include chronic kidney disease and kidney stones. Early detection and proper care are vital for effective management.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 AI Diagnostic Tool. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

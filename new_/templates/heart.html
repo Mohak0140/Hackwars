@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0056b3;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        header .logo {
+            float: left;
+            width: 20%;
+            height: 4rem;
+        }
+
+        header img {
+            width: 13rem;
+        }
+
+        header h1 {
+            float: right;
+            padding-right: 20rem;
+        }
+
+        header::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        nav {
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            padding: 8px 15px;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            border-radius: 5px;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="LOGO.png" alt="">
+        </div>
+        <h1>EarlyAid | AI Diagnostic Tool</h1>
+    </header>
+
+    <nav>
+        <a href="#">Sign Up</a>
+        <a href="/about.html">About Us</a>
+        <a href="./contact.html">Contact</a>
+    </nav>
+
+    <div class="form-container">
+        <h2>Heart Disease Analysis</h2>
+        <form action="heart" method="POST">
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="sex">Sex</label>
+                <select id="sex" name="sex" class="form-control" required>
+                    <option value="">Select</option>
+                    <option value="1">Male</option>
+                    <option value="0">Female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="cp">Chest Pain Type (CP) (1: typical angina, 2: atypical angina, 3: non-anginal pain, 4: asymptomatic)</label>
+                <input type="number" id="cp" name="cp" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="trestbps">Resting Blood Pressure (Trestbps)</label>
+                <input type="number" id="trestbps" name="trestbps" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="chol">Cholesterol (Chol)</label>
+                <input type="number" id="chol" name="chol" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="fbs">Fasting Blood Sugar > 120 mg/dl (FBS)</label>
+                <select id="fbs" name="fbs" class="form-control" required>
+                    <option value="">Select</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="restecg">Resting ECG Results (Restecg)</label>
+                <input type="number" id="restecg" name="restecg" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="thalach">Maximum Heart Rate Achieved (Thalach)</label>
+                <input type="number" id="thalach" name="thalach" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="exang">Exercise Induced Angina (Exang)</label>
+                <select id="exang" name="exang" class="form-control" required>
+                    <option value="">Select</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="oldpeak">ST Depression Induced by Exercise (Oldpeak)</label>
+                <input type="number" id="oldpeak" name="oldpeak" class="form-control" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="slope">Slope of the Peak Exercise ST Segment (Slope)</label>
+                <input type="number" id="slope" name="slope" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="ca">Number of Major Vessels Colored by Fluoroscopy (Ca)</label>
+                <input type="number" id="ca" name="ca" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="thal">Thalassemia (Thal)</label>
+                <input type="number" id="thal" name="thal" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100 mt-3">Submit</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Heart Diagnostic Tool. All rights reserved.</p>
+    </footer>
+</body>
+</html>
