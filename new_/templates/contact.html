@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #0056b3, #00bcd4);
+            background: linear-gradient(135deg, hsl(211, 100%, 35%), #00bcd4);
             color: #333;
             display: flex;
             flex-direction: column;
@@ -115,7 +115,7 @@
             font-weight: bold;
             cursor: pointer;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            transition: background-color 0.2s ease, transform 0.1s ease;
         }
 
         .contact-form button:hover {
@@ -135,17 +135,39 @@
         footer p {
             margin: 0;
         }
+        header .logo{
+            float: left;
+            /* border: 2px solid red; */
+            width: 20%;
+            height: 4rem;
+        }
+        header img{
+            width: 13rem;
+            /* height: 4rem; */
+        }
+        header h1{
+            float: right;
+            padding-right: 27rem;
+            /* border: 2px solid green; */
+        }
+        header::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
     </style>
 </head>
 <body>
     <header>
+        <div class="logo">
+            <img src="LOGO.png" alt="">
+        </div>
         <h1>Contact Us | EarlyAid</h1>
     </header>
 
     <nav>
-        <a href="/home.html">Home</a>
-        <a href="/about.html">About Us</a>
-        <a href="#">Contact</a>
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
     </nav>
 
     <div class="contact-container">
