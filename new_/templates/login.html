@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | EarlyAid</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0056b3, #00bcd4);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+        }
+        header img {
+            width: 200px;
+        }
+        header h1{
+            width: 35rem;
+            margin-left: 10rem;
+            margin-top: 1rem;
+        }
+
+        nav {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #0056b3;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-weight: bold;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #0056b3;
+            color: white;
+            border-color: #0056b3;
+        }
+
+        .login-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .login-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 40%;
+            max-width: 600px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            padding-right: 3.7rem;
+        }
+
+        .login-form h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #0056b3;
+        }
+
+        .login-form label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .login-form input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #f9f9f9;
+        }
+
+        .login-form input:focus {
+            border-color: #0056b3;
+            outline: none;
+            background-color: #ffffff;
+        }
+
+        .login-form button {
+            background-color: #0056b3;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .login-container .login-form form a{
+            color: blue;
+        }
+        .login-container .login-form form a:visited{
+            color: blue;
+        }
+        .login-container .login-form form a:hover{
+            color: rgba(255, 0, 0, 0.774);
+        }
+        .login-form button:hover {
+            background-color: #004494;
+            transform: translateY(-3px);
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: auto;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="LOGO.png" alt="EarlyAid Logo">
+        <h1>Login | EarlyAid</h1>
+    </header>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <div class="login-container">
+        <div class="login-form">
+            <h2>Login</h2>
+            <form>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" required>
+                <p>Don't have an account? <a href="Signup.html" class="signin">Sign in</a></p>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 EarlyAid. Empowering Diagnostics with AI.</p>
+    </footer>
+</body>
+</html>
