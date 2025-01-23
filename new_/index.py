@@ -1,13 +1,15 @@
 from flask import Flask, render_template, request
+from tensorflow.keras.models import load_model
 import os
 import numpy as np
 import joblib
 import pandas as pd
+import cv2
 
 app = Flask(__name__)
 
 # Configure the upload folder
-UPLOAD_FOLDER = './uploads'
+UPLOAD_FOLDER = './static'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)  # Ensure the upload folder exists
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
@@ -55,7 +57,24 @@ def result_kidney():
     filename = file.filename
     filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
     file.save(filepath)
-    return render_template("result.html")
+    model = load_model("my_tf_model.keras")
+    pic = []
+    img = cv2.imread(str(filepath))
+    img = cv2.resize(img, (28, 28))
+    pic.append(img)
+    pic1 = np.array(pic)
+    a = model.predict(pic1)
+    if a.argmax() == 0:
+        d="Cyst"
+    elif a.argmax() == 1:
+        d="Normal"
+        return render_template("result.html", file_url=filepath, result=f"The kidney is {d}.")
+    elif a.argmax() == 2:
+        d="Stone"
+    else:
+        d= "Tumor"
+    return render_template("result.html", file_url=filepath, result=f"The detected disease is {d}.")
+
 
 @app.route("/lung",methods=["POST"])
 def result_lung():
@@ -92,7 +111,7 @@ def result_heart():
     input_data = pd.DataFrame(data.T, columns=columns)
     preds = clf.predict(input_data)
     if preds[0]==1:
-        return render_template("result.html",form_data=form_data,result="You have issues related to your cardiovascular system.")
+        return render_template("result.html",form_data=form_data,result="You have issues related to your cardiovascular system. Contact the nearest hospital as soon as possible.")
     else:
         return render_template("result.html", form_data=form_data,
                                result="Your cardiovascular system if healthy.")
