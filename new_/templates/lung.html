@@ -66,7 +66,6 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            /* height: 19.8rem; */
             height: 21rem;
         }
 
@@ -160,21 +159,20 @@
                 <input type="file" accept="image/*" name="chest-xray" required onchange="previewFile(event)">
             </div>
             <div class="preview-container" id="preview-container">
-                <!-- Image preview will appear here -->
             </div>
             <button type="submit" class="btn btn-primary w-50 " style="border-radius: 5%; margin-top: 7px; padding: 10px 250px;">Submit</button>
         </form>
     </div>
 
     <footer>
-        <p>&copy; 2025 Chest Diagnostic Tool. All rights reserved.</p>
+        <p>&copy; 2025 EarlyAid. All rights reserved.</p>
     </footer>
 
     <script>
         function previewFile(event) {
             const file = event.target.files[0];
             const previewContainer = document.getElementById('preview-container');
-            previewContainer.innerHTML = ''; // Clear previous preview
+            previewContainer.innerHTML = ''; 
 
             if (file) {
                 const reader = new FileReader();
