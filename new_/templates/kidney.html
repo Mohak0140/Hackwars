@@ -146,18 +146,16 @@
             <button type="submit" class="btn btn-primary w-100 mt-3">Submit</button>
         </form>
         <div class="preview-container" id="preview-container">
-            <!-- Preview will be shown here -->
         </div>
     </div>
     <footer>
-        <p>&copy; 2025 Kidney Diagnostic Tool. All rights reserved.</p>
+        <p>&copy; 2025 EarlyAid. All rights reserved.</p>
     </footer>
     <script>
-        // Function to preview the uploaded image
         function previewFile(event) {
             const file = event.target.files[0];
             const previewContainer = document.getElementById('preview-container');
-            previewContainer.innerHTML = ''; // Clear previous preview
+            previewContainer.innerHTML = ''; 
 
             if (file) {
                 const reader = new FileReader();
